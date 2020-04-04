@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:textColor="@color/clrWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toTopOf="@+id/txtTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLableTitle"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/textLableTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/txtLable1"
+
+            android:textColor="@color/clrWhite"
+            android:textSize="55sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.002" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:text="@string/txtTotalConfirm"
+            android:textColor="@color/colorRed"
+            android:textSize="50sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textLableTitle"
+            app:layout_constraintVertical_bias="0.075" />
+
+        <TextView
+            android:id="@+id/txtConfirmNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:textColor="@color/colorRed"
+            android:textSize="45sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
+            android:id="@+id/txtDeathTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:text="@string/txtTotalDeaths"
+            android:textColor="#bdc3c7"
+            android:textStyle="bold"
+            android:textSize="50sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRecoverNum"
+            app:layout_constraintVertical_bias="0.096" />
+
+        <TextView
+            android:id="@+id/txtDeathNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+
+            android:textColor="#bdc3c7"
+            android:textSize="45sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDeathTitle"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
+            android:id="@+id/titleRecover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:text="@string/txtTotalRecover"
+            android:textColor="#2ecc71"
+            android:textSize="50sp"
+            android:textStyle="bold"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtConfirmNumber"
+            app:layout_constraintVertical_bias="0.064" />
+
+        <TextView
+            android:id="@+id/txtRecoverNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="#2ecc71"
+            android:textSize="45sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleRecover"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Today's Cases/Deaths"
+            android:textColor="@color/clrWhite"
+            android:textStyle="bold"
+            android:textSize="50sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtDeathNum"
+            app:layout_constraintVertical_bias="0.149" />
+
+        <TextView
+            android:id="@+id/txtTodayCases"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorRed"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.02" />
+
+        <TextView
+            android:id="@+id/txtTodayDeath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="#bdc3c7"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTodayCases"
+            app:layout_constraintVertical_bias="0.02" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">COVID19 Tracker</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txtLable1">United States COVID-19 Cases</string>
+    <string name="txtTotalConfirm">Total Confirmed</string>
+    <string name="_1231232123">1231232123</string>
+    <string name="txtTotalDeaths">Total Deaths</string>
+    <string name="txtTotalRecover">Total Recovered</string>
+    <string name="txtUpdatedat">Updated</string>
+    <string name="stringCases">\Cases</string>
+    <string name="stringDeaths">Deaths</string>
+</resources>
