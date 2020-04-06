@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">COVID19 Tracker</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="txtLable1">United States COVID-19 Cases</string>
@@ -11,4 +10,100 @@
     <string name="txtUpdatedat">Updated</string>
     <string name="stringCases">\Cases</string>
     <string name="stringDeaths">Deaths</string>
+    <string name="state_name">State Name</string>
+    <string name="total_cases">Total Cases:</string>
+    <string name="total_deaths">Total Deaths:</string>
+    <string name="today_s_cases_deaths">Today\'s Cases/Deaths</string>
+    <string name="login">LOGIN</string>
+    <string name="username">USERNAME</string>
+    <string name="password">PASSWORD</string>
+    <string name="create_account">Create Account</string>
+    <string name="string_usernameCreate">Username:</string>
+    <string name="string_passwordCreate">Password:</string>
+    <string name="string_genderCreate">Gender:</string>
+    <string name="string_dobCreate">Date of Birth:</string>
+    <string name="string_locationCreate">Your Location:</string>
+    <string name="string_favStatesCreate">Favorite States:</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="i_acknowledge_the_covid_19_cases_on_this_app_is_updated_in_real_time">I acknowledge the COVID-19 cases on this app is updated in real-time</string>
+    <string name="i_agree_to_create_account_on_this_app">I agree to create account on this app</string>
+    <string name="pick_your_birthday">Pick your birthday</string>
+    <string name="home">Home</string>
+    <string name="states">States</string>
+    <string name="favorite">Favorite</string>
+    <string name="about">About</string>
+    <string name="nofav">You don\'t have any favorite states. Please go back to States tab and choose at least one</string>
+    <string name="today_cases">Today Cases:</string>
+    <string name="today_deaths">Today Deaths:</string>
+    <string name="hi_username">Hi Username</string>
+    <string name="filter_number_of_cases">Filter Number of Cases that more than: </string>
+    <string name="filter">Filter</string>
+    <string name="new_password">New Password:</string>
+    <string name="confirm_password">Confirm Password:</string>
+    <string name="enter_your_new_password">Enter your new password</string>
+    <string name="re_enter_your_new_password">Re-enter your password</string>
+    <string name="change_my_information">CHANGE MY INFORMATION</string>
+    <string name="family_member">Family Member:</string>
+    <string-array name="States">
+        <item>Alabama</item>
+        <item>Alaska</item>
+        <item>American Samoa</item>
+        <item>Arizona</item>
+        <item>Arkansas</item>
+        <item>California</item>
+        <item>Colorado</item>
+        <item>Connecticut</item>
+        <item>Delaware</item>
+        <item>District Of Columbia</item>
+        <item>Florida</item>
+        <item>Georgia</item>
+        <item>Guam</item>
+        <item>Hawaii</item>
+        <item>Idaho</item>
+        <item>Illinois</item>
+        <item>Indiana</item>
+        <item>Iowa</item>
+        <item>Kansas</item>
+        <item>Kentucky</item>
+        <item>Louisiana</item>
+        <item>Maine</item>
+        <item>Marshall Islands</item>
+        <item>Maryland</item>
+        <item>Massachusetts</item>
+        <item>Michigan</item>
+        <item>Minnesota</item>
+        <item>Mississippi</item>
+        <item>Missouri</item>
+        <item>Montana</item>
+        <item>Nebraska</item>
+        <item>Nevada</item>
+        <item>New Hampshire</item>
+        <item>New Jersey</item>
+        <item>New Mexico</item>
+        <item>New York</item>
+        <item>North Carolina</item>
+        <item>North Dakota</item>
+        <item>Northern Mariana Islands</item>
+        <item>Ohio</item>
+        <item>Oklahoma</item>
+        <item>Oregon</item>
+        <item>Pennsylvania</item>
+        <item>Puerto Rico</item>
+        <item>Rhode Island</item>
+        <item>South Carolina</item>
+        <item>South Dakota</item>
+        <item>Tennessee</item>
+        <item>Texas</item>
+        <item>Utah</item>
+        <item>Vermont</item>
+        <item>Virgin Islands</item>
+        <item>Virginia</item>
+        <item>Washington</item>
+        <item>West Virginia</item>
+        <item>Wisconsin</item>
+        <item>Wyomin</item>
+    </string-array>
 </resources>

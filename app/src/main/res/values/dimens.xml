@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size50sp">50sp</dimen>
+    <dimen name="size55sp">55sp</dimen>
+    <dimen name="size45sp">45sp</dimen>
+    <dimen name="size35sp">35sp</dimen>
+    <dimen name="margin28dp">28dp</dimen>
+    <dimen name="w300dp">300dp</dimen>
+    <dimen name="margin24dp">24dp</dimen>
+    <dimen name="marginE10dp">10dp</dimen>
+    <dimen name="w253dp">251dp</dimen>
+    <dimen name="w232dp">232dp</dimen>
+    <dimen name="h168dp">168dp</dimen>
+    <dimen name="m64dp">64dp</dimen>
+    <dimen name="h61dp">61dp</dimen>
+    <dimen name="size20sp">20sp</dimen>
+    <dimen name="size200dp">200dp</dimen>
+    <dimen name="m40dp">40dp</dimen>
+    <dimen name="margin16dp">16dp</dimen>
+    <dimen name="margin5dp">5dp</dimen>
+    <dimen name="size25sp">25sp</dimen>
+    <dimen name="w500dp">500dp</dimen>
+    <dimen name="top32dp">32dp</dimen>
+    <dimen name="w225dp">225dp</dimen>
+    <dimen name="h48dp">48dp</dimen>
+    <dimen name="w314">314dp</dimen>
+    <dimen name="w307dp">307dp</dimen>
+    <dimen name="t36dp">36dp</dimen>
+    <dimen name="w356dp">356dp</dimen>
+    <dimen name="m84dp">84dp</dimen>
+    <dimen name="m164dp">164dp</dimen>
+    <dimen name="m248do">248dp</dimen>
+    <dimen name="w600dp">600dp</dimen>
+    <dimen name="w0dp">0dp</dimen>
+    <dimen name="w280dp">280dp</dimen>
+    <dimen name="w240dp">240dp</dimen>
+</resources>

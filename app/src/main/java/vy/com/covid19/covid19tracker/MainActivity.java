@@ -1,106 +1,90 @@
+/*
+Author : Vy Dao
+Course : CSIS 365
+Assignment: Major Project 2
+Due Date : 4/5/2020
+Date handed : 4/5/2020
+Description: The MainActivity file where it handle login layout
+ */
+
 package vy.com.covid19.covid19tracker;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.text.format.DateFormat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Locale;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnLogin;
+    private Button btnLogin;
+    private Button btnCreate;
+    private UserSQLHelper mUserSQLHelper;
+    private TextView tvLoginUser,tvLoginPass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnLogin = findViewById(R.id.btnLogin);
+        btnCreate = findViewById(R.id.btnCreateAccount);
+        mUserSQLHelper = new UserSQLHelper(this);
+        tvLoginPass =findViewById(R.id.tvLoginPassword);
+        tvLoginUser = findViewById(R.id.tvLoginUsername);
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GetUSTotalCase();
+                if (tvLoginPass.getText().equals("")){
+                    message("Please enter your password");
+                }
+                else if (tvLoginUser.getText().equals("")){
+                    message("Please enter your username");
+                }
+                else
+                {
+                    String tmpUsername = tvLoginUser.getText().toString();
+                    String tmpPassword = tvLoginPass.getText().toString();
+                    SQLiteDatabase db =new UserSQLHelper(MainActivity.this).getReadableDatabase();
+                    Cursor cursor = db.rawQuery("SELECT * FROM UserTable",null);
+                    ArrayList<AccountInfo> accountInfoArrayList = new ArrayList<>();
+                    while (cursor.moveToNext()){
+                        accountInfoArrayList.add(new AccountInfo(cursor.getInt(0),cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getString(4),cursor.getString(5),cursor.getString(6)));
+                    }
+                    cursor.close();
+                    boolean check = false;
+                    for (int i = 0; i < accountInfoArrayList.size(); i ++){
+                        if(accountInfoArrayList.get(i).getUsername().equals(tmpUsername) && accountInfoArrayList.get(i).getPassword().equals(tmpPassword))
+                        {
+                            ArrayList<AccountInfo> tmpArray = new ArrayList<>();
+                            AccountInfo tmpAccountInfo = accountInfoArrayList.get(i);
+                            check = true;
+                            Bundle bundle = new Bundle();
+                            bundle.putParcelable("ACCOUNT_INFO",tmpAccountInfo);
+                            Intent intent = new Intent(MainActivity.this, UserActivity.class);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        }
+                    }
+                    if(!check)
+                        message("Please re-check your username or password");
+                }
+            }
+        });
+
+        btnCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,CreateUserActivity.class);
+                startActivity(intent);
             }
         });
     }
 
-    private String respString;
-
-    public void GetUSTotalCase(){
-        final ArrayList<String> tmpList = new ArrayList<>();
-        //Set-up URL
-        final String tmpUrl = "https://corona.lmao.ninja/countries/USA";
-
-        //Call API
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(tmpUrl)
-                .build();
-
-        //Handle JSON
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                e.printStackTrace();
-            }
-
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull final Response response) throws IOException {
-                if (response.isSuccessful()){
-                    try {
-                        respString = response.body().string();
-                    }catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    try {
-                        JSONObject jsonObject = new JSONObject(respString);
-
-                        //Times
-                        int tmpCases = jsonObject.getInt("cases");
-                        int tmpDeath = jsonObject.getInt("deaths");
-                        int tmpRecovered = jsonObject.getInt("recovered");
-                        int tmpTodayCase = jsonObject.getInt("todayCases");
-                        int tmpTodayDeath = jsonObject.getInt("todayDeaths");
-
-                        //Date Convert
-                        long time = jsonObject.getLong("updated");
-                        Calendar cal = Calendar.getInstance(Locale.US);
-                        cal.setTimeInMillis(time);
-                        String date = DateFormat.format("MM-dd-yyyy hh:mm:ss", cal).toString();
-
-                        tmpList.add(String.format("%,d", tmpCases));
-                        tmpList.add(String.format("%,d", tmpDeath));
-                        tmpList.add(String.format("%,d", tmpRecovered));
-                        tmpList.add(date);
-                        tmpList.add(String.format("%,d", tmpTodayCase));
-                        tmpList.add(String.format("%,d", tmpTodayDeath));
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    Bundle bundle = new Bundle();
-                    Intent intent = new Intent(MainActivity.this,UserActivity.class);
-                    bundle.putStringArrayList("US_TOTAL",tmpList);
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-                }
-            }
-        });
+    public void message(String message){
+        Toast.makeText(this,message,Toast.LENGTH_LONG).show();
     }
 }

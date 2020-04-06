@@ -20,7 +20,7 @@
 
 
             android:textColor="@color/clrWhite"
-            android:textSize="20sp"
+            android:textSize="@dimen/size20sp"
             android:textStyle="bold"
 
             app:layout_constraintBottom_toTopOf="@+id/txtTitle"
@@ -31,12 +31,12 @@
 
         <TextView
             android:id="@+id/textLableTitle"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/w0dp"
             android:layout_height="wrap_content"
             android:text="@string/txtLable1"
 
             android:textColor="@color/clrWhite"
-            android:textSize="55sp"
+            android:textSize="@dimen/size55sp"
             android:textStyle="bold"
             android:gravity="center_horizontal"
 
@@ -55,7 +55,7 @@
             android:gravity="center_horizontal"
             android:text="@string/txtTotalConfirm"
             android:textColor="@color/colorRed"
-            android:textSize="50sp"
+            android:textSize="@dimen/size50sp"
             android:textStyle="bold"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
             android:gravity="center_horizontal"
 
             android:textColor="@color/colorRed"
-            android:textSize="45sp"
+            android:textSize="@dimen/size45sp"
             android:textStyle="bold"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -89,9 +89,9 @@
             android:gravity="center_horizontal"
 
             android:text="@string/txtTotalDeaths"
-            android:textColor="#bdc3c7"
+            android:textColor="@color/colorGray"
             android:textStyle="bold"
-            android:textSize="50sp"
+            android:textSize="@dimen/size50sp"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -106,8 +106,8 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
 
-            android:textColor="#bdc3c7"
-            android:textSize="45sp"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/size45sp"
             android:textStyle="bold"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -125,8 +125,8 @@
 
             android:gravity="center_horizontal"
             android:text="@string/txtTotalRecover"
-            android:textColor="#2ecc71"
-            android:textSize="50sp"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/size50sp"
             android:textStyle="bold"
 
             app:layout_constraintBottom_toBottomOf="parent"
@@ -138,11 +138,11 @@
 
         <TextView
             android:id="@+id/txtRecoverNum"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:textColor="#2ecc71"
-            android:textSize="45sp"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/size45sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -155,10 +155,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
-            android:text="Today's Cases/Deaths"
+            android:text="@string/today_s_cases_deaths"
             android:textColor="@color/clrWhite"
             android:textStyle="bold"
-            android:textSize="50sp"
+            android:textSize="@dimen/size50sp"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -172,7 +172,7 @@
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:textColor="@color/colorRed"
-            android:textSize="45sp"
+            android:textSize="@dimen/size45sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -184,8 +184,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:textColor="#bdc3c7"
-            android:textSize="45sp"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/size45sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

@@ -6,12 +6,11 @@
     android:background="@color/colorPrimary"
     tools:context=".StatesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/txtStates"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/StateRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textColor="@color/clrWhite"
-        android:text="This is State Frag" />
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

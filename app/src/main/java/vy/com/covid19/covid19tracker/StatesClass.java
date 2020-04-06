@@ -1,3 +1,11 @@
+/*
+Author : Vy Dao
+Course : CSIS 365
+Assignment: Major Project 2
+Due Date : 4/5/2020
+Date handed : 4/5/2020
+Description: The StatesClass file where it handle the States Class
+ */
 package vy.com.covid19.covid19tracker;
 
 import android.os.Parcel;
